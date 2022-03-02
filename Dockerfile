@@ -5,10 +5,10 @@ FROM public.ecr.aws/lambda/provided:al2
 # Download and install Julia
 WORKDIR /usr/local
 RUN yum install -y tar gzip \
- && curl -LO https://julialang-s3.julialang.org/bin/linux/x64/1.5/julia-1.6.3-linux-x86_64.tar.gz \
- && tar xf julia-1.6.3-linux-x86_64.tar.gz \
- && rm julia-1.6.3-linux-x86_64.tar.gz \
- && ln -s julia-1.6.3 julia
+ && curl -LO https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.2-linux-x86_64.tar.gz \
+ && tar xf julia-1.7.2-linux-x86_64.tar.gz \
+ && rm julia-1.7.2-linux-x86_64.tar.gz \
+ && ln -s julia-1.7.2 julia
 
 # Install application
 WORKDIR /var/task
